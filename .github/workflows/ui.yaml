@@ -9,6 +9,11 @@ on:
       - ".github/workflows/*.yaml"
       - 'ui/**'
 
+defaults:
+  run:
+    shell: bash
+    working-directory: ui
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,10 +27,6 @@ jobs:
       - name: Install dependencies
         run: yarn --frozen-lockfile
       - name: Build
-        run: |
-          cd ui
-          yarn build
+        run: yarn build
       - name: Test
-        run: |
-          cd ui
-          yarn test || echo "No test present"
+        run: yarn test || echo "No test present"
