@@ -1,18 +1,23 @@
 import {
   Header,
+  TokenResult,
   SignOutButton,
+  GoogleSignInButton,
   FacebookSignInButton,
   InstagramSignInButton,
-  SessionWrapper,
 } from "ui";
+
+import { SessionWrapper } from "ui";
 
 export default function Page() {
   return (
     <>
       <Header text="Web" />
       <SessionWrapper>
-        <InstagramSignInButton />
+        <TokenResult />
+        <GoogleSignInButton />
         <FacebookSignInButton />
+        <InstagramSignInButton />
         <SignOutButton />
       </SessionWrapper>
     </>
