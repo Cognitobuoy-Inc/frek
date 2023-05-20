@@ -1,11 +1,20 @@
-import { Button, Header, SignOutButton } from "ui";
+import {
+  Header,
+  SignOutButton,
+  FacebookSignInButton,
+  InstagramSignInButton,
+  SessionWrapper,
+} from "ui";
 
 export default function Page() {
   return (
     <>
       <Header text="Web" />
-      <Button />
-      <SignOutButton />
+      <SessionWrapper>
+        <InstagramSignInButton />
+        <FacebookSignInButton />
+        <SignOutButton />
+      </SessionWrapper>
     </>
   );
 }

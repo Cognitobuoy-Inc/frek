@@ -1,7 +1,12 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
-  "globalEnv": ["INSTAGRAM_CLIENT_ID", "INSTAGRAM_CLIENT_SECRET"],
+  "globalEnv": [
+    "INSTAGRAM_CLIENT_ID",
+    "INSTAGRAM_CLIENT_SECRET",
+    "FACEBOOK_CLIENT_ID",
+    "FACEBOOK_CLIENT_SECRET"
+  ],
   "pipeline": {
     "build": {
       "dependsOn": ["^build"],
