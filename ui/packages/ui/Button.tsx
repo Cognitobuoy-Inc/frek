@@ -2,8 +2,26 @@
 
 import { signIn, signOut } from "next-auth/react";
 
-export const Button = () => {
-  return <button onClick={() => signIn("instagram")}>SIGN IN INSTAGRAM</button>;
+export const GoogleSignInButton = () => {
+  return <button onClick={() => signIn("google")}>SIGN IN WITH GOOGLE</button>;
+};
+
+export const TwitterSignInButton = () => {
+  return (
+    <button onClick={() => signIn("twitter")}>SIGN IN WITH TWITTER</button>
+  );
+};
+
+export const FacebookSignInButton = () => {
+  return (
+    <button onClick={() => signIn("facebook")}>SIGN IN WITH FACEBOOK</button>
+  );
+};
+
+export const InstagramSignInButton = () => {
+  return (
+    <button onClick={() => signIn("instagram")}>SIGN IN WITH INSTAGRAM</button>
+  );
 };
 
 export const SignOutButton = () => {
