@@ -5,6 +5,7 @@ import {
   GoogleSignInButton,
   FacebookSignInButton,
   InstagramSignInButton,
+  TwitterSignInButton,
 } from "ui";
 
 import { SessionWrapper } from "ui";
@@ -16,6 +17,7 @@ export default function Page() {
       <SessionWrapper>
         <TokenResult />
         <GoogleSignInButton />
+        <TwitterSignInButton />
         <FacebookSignInButton />
         <InstagramSignInButton />
         <SignOutButton />

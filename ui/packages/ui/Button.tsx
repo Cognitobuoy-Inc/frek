@@ -6,6 +6,12 @@ export const GoogleSignInButton = () => {
   return <button onClick={() => signIn("google")}>SIGN IN WITH GOOGLE</button>;
 };
 
+export const TwitterSignInButton = () => {
+  return (
+    <button onClick={() => signIn("twitter")}>SIGN IN WITH TWITTER</button>
+  );
+};
+
 export const FacebookSignInButton = () => {
   return (
     <button onClick={() => signIn("facebook")}>SIGN IN WITH FACEBOOK</button>
