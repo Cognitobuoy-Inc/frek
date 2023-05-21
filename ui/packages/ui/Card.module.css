@@ -1,0 +1,22 @@
+.authCardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.authCardSiginTextContainer {
+    text-align: center;
+}
+
+.authSignInButtonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signUpInfoTextContainer {
+    text-align: center;
+    padding-left: 3.6rem;
+    padding-right: 3.6rem;
+}

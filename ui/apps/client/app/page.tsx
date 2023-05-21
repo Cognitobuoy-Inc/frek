@@ -1,27 +1,43 @@
 import {
-  Header,
-  TokenResult,
-  SignOutButton,
   GoogleSignInButton,
+  TwitterSignInButton,
   FacebookSignInButton,
   InstagramSignInButton,
-  TwitterSignInButton,
 } from "ui";
+import styles from "./styles.module.css";
+import { redirect } from "next/navigation";
+import { getServerSession } from "next-auth";
+import AuthCard from "ui/Card";
+import Header from "ui/Header";
 
-import { SessionWrapper } from "ui";
+export default async function Page() {
+  const session = await getServerSession();
 
-export default function Page() {
+  if (session) {
+    redirect("/home");
+  }
+
   return (
-    <>
-      <Header text="Web" />
-      <SessionWrapper>
-        <TokenResult />
-        <GoogleSignInButton />
-        <TwitterSignInButton />
-        <FacebookSignInButton />
-        <InstagramSignInButton />
-        <SignOutButton />
-      </SessionWrapper>
-    </>
+    <main>
+      <Header />
+      <div className={styles.signInPageContainer}>
+        <AuthCard>
+          <div className={styles.signInSection}>
+            <div className={styles.signInButtonContainer}>
+              <GoogleSignInButton />
+            </div>
+            <div className={styles.signInButtonContainer}>
+              <TwitterSignInButton />
+            </div>
+            <div className={styles.signInButtonContainer}>
+              <FacebookSignInButton />
+            </div>
+            <div className={styles.signInButtonContainer}>
+              <InstagramSignInButton />
+            </div>
+          </div>
+        </AuthCard>
+      </div>
+    </main>
   );
 }
