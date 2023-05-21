@@ -1,0 +1,30 @@
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    padding: 24px;
+    border: 3px solid black;
+}
+
+.signInSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.signInButtonContainer {
+    display: flex;
+    width: 15.5rem;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    margin-bottom: 0.65rem;
+}
+
+.signInPageContainer {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
